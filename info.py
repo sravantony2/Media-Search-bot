@@ -30,9 +30,17 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 START_MSG = """
-**Hi, I'm Media Search bot**
+**Hi, I'm JEE NEET VIDEO LECTURES BOT**
 
-Here you can search files in inline mode. Just press following buttons and start searching.
+Here you can search JEE NEET LECTURES in inline mode. Just press following buttons and start searching.
+
+You can get jee neet video lectures (yakeen, lakshya, etoos, etc) by this bot. 
+
+To use this bot, Watch the below 1 min video tutorial ⬇
+
+   https://youtu.be/EiD7wPmUUkk
+
+Powered by NEETJEEprep (@neetjeeprep)
 """
 
 SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
