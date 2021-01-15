@@ -13,7 +13,7 @@ async def start(bot, message):
     """Start command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
         text = INVITE_MSG
-        channel_url = "YOUR CHANNEL URL"
+        channel_url = "https://t.me/jeeneetonline"
         buttons = [[InlineKeyboardButton('Join channel', url=channel_url)]]
     else:
         text = START_MSG
