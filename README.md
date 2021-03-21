@@ -1,4 +1,5 @@
-## [Media Search bot](https://github.com/Mahesh0253/Media-Search-bot)
+# Media Search bot
+Modified by [@AbirHasan2005](https://github.com/AbirHasan2005)
 
 * Index channel/group files for inline search.
 * When you going to post file on telegram channel/group this bot will save that in database, So you can search that easily in inline mode.
