@@ -14,7 +14,7 @@ import aiofiles
 import aiofiles.os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS
+from info import INLINESEARCH_MSG, CHANNELS, ADMINS
 from utils import Media
 from database import Database
 
@@ -25,15 +25,15 @@ SEC_DB = os.environ.get("SEC_DB", "") # Put 2nd MongoDB URL for Saving UserID
 mongodb = Database(SEC_DB, "AbirHasan2005")
 broadcast_ids = {}
 
-@Client.on_message(filters.command('start'))
-async def start(bot, message):
-    """Start command handler"""
+@Client.on_message(filters.command('inlinesearch'))
+async def inlinesearch(bot, message):
+    """Inlinesearch command handler"""
     buttons = [[
         InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
         InlineKeyboardButton('Go Inline', switch_inline_query=''),
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply(START_MSG, reply_markup=reply_markup)
+    await message.reply(INLINESEARCH_MSG, reply_markup=reply_markup)
     # Add UserID to DB
     if not await mongodb.is_user_exist(message.from_user.id):
         await mongodb.add_user(message.from_user.id)
