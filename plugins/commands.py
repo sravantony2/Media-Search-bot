@@ -152,7 +152,7 @@ async def broadcast_(bot, message):
     done = 0
     failed = 0
     success = 0
-    bot.broadcast_ids[broadcast_id] = dict(
+    broadcast_ids[broadcast_id] = dict(
         total = total_users,
         current = done,
         failed = failed,
@@ -177,18 +177,18 @@ async def broadcast_(bot, message):
                 await mongodb.delete_user(user['id'])
             
             done += 1
-            if bot.broadcast_ids.get(broadcast_id) is None:
+            if broadcast_ids.get(broadcast_id) is None:
                 break
             else:
-                bot.broadcast_ids[broadcast_id].update(
+                broadcast_ids[broadcast_id].update(
                     dict(
                         current = done,
                         failed = failed,
                         success = success
                     )
                 )
-    if bot.broadcast_ids.get(broadcast_id):
-        bot.broadcast_ids.pop(broadcast_id)
+    if broadcast_ids.get(broadcast_id):
+        broadcast_ids.pop(broadcast_id)
     completed_in = datetime.timedelta(seconds=int(time.time()-start_time))
     await asyncio.sleep(3)
     await out.delete()
