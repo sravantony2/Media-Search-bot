@@ -28,20 +28,17 @@ DATABASE_URI = environ['DATABASE_URI']
 DATABASE_NAME = environ['DATABASE_NAME']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-# Messages
-START_MSG = """
-**Hi, I'm JEE NEET VIDEO LECTURES BOT**
+#Messages
+INLINESEARCH_MSG = """
+**SEARCH MATERIALS WITH INLINE MODE**
+With this Mode, You can get **Telegram Files** Directly which are available in NEET JEE FORMULAE Database.
+You can get **NEET JEE VIDEO LECTURES** Also
+To use this bot, Type
+  *@NeetJeeMaterialBot <your query>*
 
-Here you can search JEE NEET LECTURES in inline mode. Just press following buttons and start searching.
-
-You can get jee neet video lectures (yakeen, lakshya, etoos, etc) by this bot. 
-
-To use this bot, Watch the below 1 min video tutorial ⬇
-
-   https://youtu.be/EiD7wPmUUkk
-
-Powered by NEETJEEprep (@neetjeeprep)
+Powered by NEET JEE FORMULAE 
 """
 
-SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
+SHARE_BUTTON_TEXT = 'Hey! You can Try this Awesome Bot {username}, For searching Materials anywhere on Telegram with inline mode.
+
 INVITE_MSG = environ.get('INVITE_MSG', 'Please join @.... to use this bot')
