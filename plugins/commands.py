@@ -8,15 +8,15 @@ from utils import Media
 logger = logging.getLogger(__name__)
 
 
-@Client.on_message(filters.command('start'))
-async def start(bot, message):
-    """Start command handler"""
+@Client.on_message(filters.command('inlinesearch'))
+async def inlinesearch(bot, message):
+    """Inlinesearch command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
         text = INVITE_MSG
-        channel_url = "https://t.me/jeeneetonline"
+        channel_url = "https://t.me/joinchat/BFvBsCvgl8llZDY1"
         buttons = [[InlineKeyboardButton('Join channel', url=channel_url)]]
     else:
-        text = START_MSG
+        text = INLINESEARCH_MSG
         buttons = [[
             InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Go Inline', switch_inline_query=''),
