@@ -30,9 +30,9 @@ INLINESEARCH_MSG = """
 With this Mode, You can get **Telegram Files** Directly which are available in NEET JEE FORMULAE Database.
 You can get **NEET JEE VIDEO LECTURES** Also
 To use this bot, Type
-  *@NeetJeeMaterialBot <your query>*
+  __@NeetJeeMaterialBot <your query>__
 
 Powered by NEET JEE FORMULAE 
 """
 
-SHARE_BUTTON_TEXT = 'Hey! You can Try this Awesome Bot {username}, For searching Materials anywhere on Telegram with inline mode.
+SHARE_BUTTON_TEXT = 'Hey! You can Try this Awesome Bot {username}, For searching Materials anywhere on Telegram with inline mode.'
