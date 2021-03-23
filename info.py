@@ -27,10 +27,11 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Messages
 INLINESEARCH_MSG = """
 **SEARCH MATERIALS WITH INLINE MODE**
-With this Mode, You can get Telegram Files Directly which are available in NEET JEE FORMULAE Database.
-You can get jee neet video lectures (yakeen, lakshya, etoos, etc) by this bot. 
-To use this bot, Type @
-https://youtu.be/EiD7wPmUUkk
+With this Mode, You can get **Telegram Files** Directly which are available in NEET JEE FORMULAE Database.
+You can get **NEET JEE VIDEO LECTURES** Also
+To use this bot, Type
+  *@NeetJeeMaterialBot <your query>*
+
 Powered by NEET JEE FORMULAE 
 """
 
