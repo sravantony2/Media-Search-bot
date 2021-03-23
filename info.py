@@ -39,6 +39,6 @@ To use this bot, Type
 Powered by NEET JEE FORMULAE 
 """
 
-SHARE_BUTTON_TEXT = 'Hey! You can Try this Awesome Bot {username}, For searching Materials anywhere on Telegram with inline mode.
+SHARE_BUTTON_TEXT = 'Hey! You can Try this Awesome Bot {username}, For searching Materials anywhere on Telegram with inline mode.'
 
 INVITE_MSG = environ.get('INVITE_MSG', 'Please join @.... to use this bot')
