@@ -1,12 +1,27 @@
 import os
+import traceback
+import datetime
+import asyncio
+import string
+import random
+import time
 import logging
+import datetime
+import aiofiles
+import aiofiles.os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import INLINESEARCH_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
+from database import Database
+
 
 logger = logging.getLogger(__name__)
 
+## --- MongoDB --- ##
+SEC_DB = os.environ.get("SEC_DB", "") # Put 2nd MongoDB URL for Saving UserID
+mongodb = Database(SEC_DB, "AbirHasan2005")
+broadcast_ids = {}
 
 @Client.on_message(filters.command('inlinesearch'))
 async def inlinesearch(bot, message):
@@ -24,6 +39,9 @@ async def inlinesearch(bot, message):
 
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply(text, reply_markup=reply_markup)
+    # Add UserID to DB
+    if not await mongodb.is_user_exist(message.from_user.id):
+        await mongodb.add_user(message.from_user.id)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
