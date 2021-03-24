@@ -34,7 +34,10 @@ INLINESEARCH_MSG = """
 With this Mode, You can get **Telegram Files** Directly which are available in NEET JEE FORMULAE Database.
 You can get **NEET JEE VIDEO LECTURES** Also
 To use this bot, Type
-  *@NeetJeeMaterialBot <your query>*
+  __@NeetJeeMaterialBot <your query>__
+
+**Example:**
+       __@NeetJeeMaterialBot Allen__
 
 Powered by NEET JEE FORMULAE 
 """
